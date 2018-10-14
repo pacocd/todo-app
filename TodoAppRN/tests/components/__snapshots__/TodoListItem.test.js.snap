@@ -57,6 +57,7 @@ ShallowWrapper {
       "className": "todoContainerView",
       "style": Object {
         "alignItems": "center",
+        "backgroundColor": "white",
         "flex": 1,
         "flexDirection": "row",
         "paddingVertical": 14,
@@ -142,6 +143,7 @@ ShallowWrapper {
         "className": "todoContainerView",
         "style": Object {
           "alignItems": "center",
+          "backgroundColor": "white",
           "flex": 1,
           "flexDirection": "row",
           "paddingVertical": 14,

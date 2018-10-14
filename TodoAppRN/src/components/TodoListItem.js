@@ -33,7 +33,8 @@ export class TodoListItem extends Component {
           flex: 1,
           paddingVertical: 14,
           flexDirection: 'row',
-          alignItems: 'center'
+          alignItems: 'center',
+          backgroundColor: 'white'
         }}
       >
         <Text

@@ -124,8 +124,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <FlatList
+      "children": <SwipeListView
         className="todoFlatList"
+        closeOnRowBeginSwipe={false}
+        closeOnRowPress={true}
+        closeOnScroll={true}
         data={
           Array [
             Object {
@@ -136,17 +139,20 @@ ShallowWrapper {
             },
           ]
         }
-        disableVirtualization={false}
-        horizontal={false}
-        initialNumToRender={10}
+        directionalDistanceChangeThreshold={2}
+        disableLeftSwipe={false}
+        disableRightSwipe={true}
         keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onEndReachedThreshold={2}
+        leftOpenValue={0}
+        previewFirstRow={false}
+        recalculateHiddenLayout={false}
+        renderHiddenItem={[Function]}
         renderItem={[Function]}
-        scrollEventThrottle={50}
-        updateCellsBatchingPeriod={50}
-        windowSize={21}
+        rightOpenValue={-75}
+        swipeToClosePercent={50}
+        swipeToOpenPercent={50}
+        swipeToOpenVelocityContribution={0}
+        useFlatList={true}
       />,
       "className": "todoListView",
       "style": Object {
@@ -161,6 +167,9 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "className": "todoFlatList",
+        "closeOnRowBeginSwipe": false,
+        "closeOnRowPress": true,
+        "closeOnScroll": true,
         "data": Array [
           Object {
             "completed": false,
@@ -169,17 +178,20 @@ ShallowWrapper {
             "user_id": 1,
           },
         ],
-        "disableVirtualization": false,
-        "horizontal": false,
-        "initialNumToRender": 10,
+        "directionalDistanceChangeThreshold": 2,
+        "disableLeftSwipe": false,
+        "disableRightSwipe": true,
         "keyExtractor": [Function],
-        "maxToRenderPerBatch": 10,
-        "numColumns": 1,
-        "onEndReachedThreshold": 2,
+        "leftOpenValue": 0,
+        "previewFirstRow": false,
+        "recalculateHiddenLayout": false,
+        "renderHiddenItem": [Function],
         "renderItem": [Function],
-        "scrollEventThrottle": 50,
-        "updateCellsBatchingPeriod": 50,
-        "windowSize": 21,
+        "rightOpenValue": -75,
+        "swipeToClosePercent": 50,
+        "swipeToOpenPercent": 50,
+        "swipeToOpenVelocityContribution": 0,
+        "useFlatList": true,
       },
       "ref": null,
       "rendered": null,
@@ -193,8 +205,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <FlatList
+        "children": <SwipeListView
           className="todoFlatList"
+          closeOnRowBeginSwipe={false}
+          closeOnRowPress={true}
+          closeOnScroll={true}
           data={
             Array [
               Object {
@@ -205,17 +220,20 @@ ShallowWrapper {
               },
             ]
           }
-          disableVirtualization={false}
-          horizontal={false}
-          initialNumToRender={10}
+          directionalDistanceChangeThreshold={2}
+          disableLeftSwipe={false}
+          disableRightSwipe={true}
           keyExtractor={[Function]}
-          maxToRenderPerBatch={10}
-          numColumns={1}
-          onEndReachedThreshold={2}
+          leftOpenValue={0}
+          previewFirstRow={false}
+          recalculateHiddenLayout={false}
+          renderHiddenItem={[Function]}
           renderItem={[Function]}
-          scrollEventThrottle={50}
-          updateCellsBatchingPeriod={50}
-          windowSize={21}
+          rightOpenValue={-75}
+          swipeToClosePercent={50}
+          swipeToOpenPercent={50}
+          swipeToOpenVelocityContribution={0}
+          useFlatList={true}
         />,
         "className": "todoListView",
         "style": Object {
@@ -230,6 +248,9 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "todoFlatList",
+          "closeOnRowBeginSwipe": false,
+          "closeOnRowPress": true,
+          "closeOnScroll": true,
           "data": Array [
             Object {
               "completed": false,
@@ -238,17 +259,20 @@ ShallowWrapper {
               "user_id": 1,
             },
           ],
-          "disableVirtualization": false,
-          "horizontal": false,
-          "initialNumToRender": 10,
+          "directionalDistanceChangeThreshold": 2,
+          "disableLeftSwipe": false,
+          "disableRightSwipe": true,
           "keyExtractor": [Function],
-          "maxToRenderPerBatch": 10,
-          "numColumns": 1,
-          "onEndReachedThreshold": 2,
+          "leftOpenValue": 0,
+          "previewFirstRow": false,
+          "recalculateHiddenLayout": false,
+          "renderHiddenItem": [Function],
           "renderItem": [Function],
-          "scrollEventThrottle": 50,
-          "updateCellsBatchingPeriod": 50,
-          "windowSize": 21,
+          "rightOpenValue": -75,
+          "swipeToClosePercent": 50,
+          "swipeToOpenPercent": 50,
+          "swipeToOpenVelocityContribution": 0,
+          "useFlatList": true,
         },
         "ref": null,
         "rendered": null,

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import { View, FlatList, ActivityIndicator } from 'react-native';
+import {
+  View,
+  ActivityIndicator,
+  TouchableHighlight,
+  Text
+} from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { SwipeListView } from 'react-native-swipe-list-view';
 import APIManager from '../managers/APIManager';
 import APIErrorManager from '../managers/APIErrorManager';
 import TodoListItem from '../components/TodoListItem';
@@ -49,11 +55,32 @@ export class TodoList extends Component {
           style={{ backgroundColor: 'white', flex: 1 }}
           className="todoListView"
         >
-          <FlatList
+          <SwipeListView
+            useFlatList
             className="todoFlatList"
             data={todoListData}
             keyExtractor={this.keyExtractor}
             renderItem={this.renderListItem}
+            disableRightSwipe
+            rightOpenValue={-75}
+            renderHiddenItem={data => {
+              return (
+                <TouchableHighlight
+                  style={{
+                    backgroundColor: 'red',
+                    width: 75,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flex: 1,
+                    alignSelf: 'flex-end'
+                  }}
+                >
+                  <View>
+                    <Text style={{ color: 'white' }}>Delete</Text>
+                  </View>
+                </TouchableHighlight>
+              );
+            }}
           />
         </View>
       );
