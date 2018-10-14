@@ -26,33 +26,83 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        test
-      </Text>,
+      "children": Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          className="todoTitleText"
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "flex": 1,
+              "marginHorizontal": 16,
+            }
+          }
+        >
+          test
+        </Text>,
+        <Switch
+          className="todoCompletedSwitch"
+          disabled={false}
+          onTintColor="#4688f1"
+          onValueChange={[Function]}
+          style={
+            Object {
+              "marginRight": 16,
+            }
+          }
+          value={false}
+        />,
+      ],
+      "className": "todoContainerView",
       "style": Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
         "paddingVertical": 14,
-        "width": "100%",
       },
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "accessible": true,
-        "allowFontScaling": true,
-        "children": "test",
-        "ellipsizeMode": "tail",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "test",
+          "className": "todoTitleText",
+          "ellipsizeMode": "tail",
+          "style": Object {
+            "flex": 1,
+            "marginHorizontal": 16,
+          },
+        },
+        "ref": null,
+        "rendered": "test",
+        "type": [Function],
       },
-      "ref": null,
-      "rendered": "test",
-      "type": [Function],
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "todoCompletedSwitch",
+          "disabled": false,
+          "onTintColor": "#4688f1",
+          "onValueChange": [Function],
+          "style": Object {
+            "marginRight": 16,
+          },
+          "thumbTintColor": undefined,
+          "value": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -61,33 +111,83 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          test
-        </Text>,
+        "children": Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            className="todoTitleText"
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "flex": 1,
+                "marginHorizontal": 16,
+              }
+            }
+          >
+            test
+          </Text>,
+          <Switch
+            className="todoCompletedSwitch"
+            disabled={false}
+            onTintColor="#4688f1"
+            onValueChange={[Function]}
+            style={
+              Object {
+                "marginRight": 16,
+              }
+            }
+            value={false}
+          />,
+        ],
+        "className": "todoContainerView",
         "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
           "paddingVertical": 14,
-          "width": "100%",
         },
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "test",
-          "ellipsizeMode": "tail",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "test",
+            "className": "todoTitleText",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "flex": 1,
+              "marginHorizontal": 16,
+            },
+          },
+          "ref": null,
+          "rendered": "test",
+          "type": [Function],
         },
-        "ref": null,
-        "rendered": "test",
-        "type": [Function],
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "todoCompletedSwitch",
+            "disabled": false,
+            "onTintColor": "#4688f1",
+            "onValueChange": [Function],
+            "style": Object {
+              "marginRight": 16,
+            },
+            "thumbTintColor": undefined,
+            "value": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": [Function],
     },
   ],
