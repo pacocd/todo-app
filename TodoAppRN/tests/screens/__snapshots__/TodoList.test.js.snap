@@ -1,10 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`when TodoList is full rendered renders correctly 1`] = `
+exports[`when TodoList is fully rendered renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoList
+    getTodoList={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Promise {
+              "_40": 0,
+              "_55": Object {
+                "data": Object {
+                  "status": 200,
+                },
+              },
+              "_65": 1,
+              "_72": null,
+            },
+          },
+          Object {
+            "isThrow": false,
+            "value": Promise {
+              "_40": 0,
+              "_55": Object {
+                "data": Object {
+                  "status": 200,
+                },
+              },
+              "_65": 1,
+              "_72": null,
+            },
+          },
+        ],
+      }
+    }
+    hasError={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "data": Object {
+                "status": 200,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": false,
+          },
+        ],
+      }
+    }
     navigation={Object {}}
+    setTodoListData={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "status": 200,
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
