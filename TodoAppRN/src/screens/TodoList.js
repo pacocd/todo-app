@@ -39,18 +39,21 @@ export class TodoList extends Component {
 
   keyExtractor = item => `${item.id}`;
 
+  renderListItem = ({ item }) => <TodoListItem todo={item} />;
+
   render() {
     const { todoListData } = this.props;
     if (todoListData) {
       return (
         <View
           style={{ backgroundColor: 'white', flex: 1 }}
-          testID="todoListView"
+          className="todoListView"
         >
           <FlatList
+            className="todoFlatList"
             data={todoListData}
             keyExtractor={this.keyExtractor}
-            renderItem={({ item }) => <TodoListItem todo={item} />}
+            renderItem={this.renderListItem}
           />
         </View>
       );
@@ -58,7 +61,7 @@ export class TodoList extends Component {
 
     return (
       <View
-        testID="activityIndicatorView"
+        className="activityIndicatorView"
         style={{
           backgroundColor: 'white',
           flex: 1,
@@ -72,12 +75,12 @@ export class TodoList extends Component {
   }
 }
 
-const mapStateToProps = ({ todos }) => {
+export const mapStateToProps = ({ todos }) => {
   const { todoListData } = todos;
   return { todoListData };
 };
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
   return { setTodoListData: data => dispatch(setTodoListData(data)) };
 };
 
