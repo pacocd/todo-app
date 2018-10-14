@@ -75,15 +75,6 @@ describe('when TodoList is fully rendered', () => {
     expect(wrapper.instance().keyExtractor(item)).toBe('1');
   });
 
-  it('calls renderListItem to get TodoListItem', () => {
-    const itemData = {
-      item: { id: 1, title: 'test', user_id: 1, completed: false }
-    };
-    expect(wrapper.instance().renderListItem(itemData)).toEqual(
-      <TodoListItem todo={itemData.item} />
-    );
-  });
-
   it('expects todoFlatList to be rendered', () => {
     expect(
       wrapper
