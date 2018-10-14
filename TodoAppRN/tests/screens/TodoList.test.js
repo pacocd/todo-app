@@ -6,15 +6,22 @@ import { TodoList } from '../../src/screens/TodoList';
 configure({ adapter: new Adapter() });
 
 describe('when TodoList is fully rendered', () => {
+  const todoListDataMock = [
+    { id: 1, title: 'test', user_id: 1, completed: false }
+  ];
   const props = {
     navigation: {},
-    getTodoList: jest
-      .fn()
-      .mockReturnValue(
-        new Promise(resolve => resolve({ data: { status: 200 } }))
-      ),
+    getTodoList: jest.fn().mockReturnValue(
+      new Promise(resolve =>
+        resolve({
+          data: todoListDataMock,
+          status: 200
+        })
+      )
+    ),
     hasError: jest.fn().mockReturnValue(false),
-    setTodoListData: jest.fn()
+    setTodoListData: jest.fn(),
+    todoListData: todoListDataMock
   };
   const wrapper = shallow(<TodoList {...props} />);
 
@@ -32,15 +39,14 @@ describe('when TodoList is fully rendered', () => {
 
   it('returns an error in getTodoList response', () => {
     expect(wrapper.instance().props.hasError).toHaveBeenCalledWith({
-      data: {
-        status: 200
-      }
+      status: 200,
+      data: todoListDataMock
     });
   });
 
   it('expects setTodoListData to have been called with data from getTodoList', () => {
-    expect(wrapper.instance().props.setTodoListData).toHaveBeenCalledWith({
-      status: 200
-    });
+    expect(wrapper.instance().props.setTodoListData).toHaveBeenCalledWith(
+      todoListDataMock
+    );
   });
 });

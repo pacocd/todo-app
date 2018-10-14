@@ -16,9 +16,15 @@ ShallowWrapper {
             "value": Promise {
               "_40": 0,
               "_55": Object {
-                "data": Object {
-                  "status": 200,
-                },
+                "data": Array [
+                  Object {
+                    "completed": false,
+                    "id": 1,
+                    "title": "test",
+                    "user_id": 1,
+                  },
+                ],
+                "status": 200,
               },
               "_65": 1,
               "_72": null,
@@ -29,9 +35,15 @@ ShallowWrapper {
             "value": Promise {
               "_40": 0,
               "_55": Object {
-                "data": Object {
-                  "status": 200,
-                },
+                "data": Array [
+                  Object {
+                    "completed": false,
+                    "id": 1,
+                    "title": "test",
+                    "user_id": 1,
+                  },
+                ],
+                "status": 200,
               },
               "_65": 1,
               "_72": null,
@@ -45,9 +57,15 @@ ShallowWrapper {
         "calls": Array [
           Array [
             Object {
-              "data": Object {
-                "status": 200,
-              },
+              "data": Array [
+                Object {
+                  "completed": false,
+                  "id": 1,
+                  "title": "test",
+                  "user_id": 1,
+                },
+              ],
+              "status": 200,
             },
           ],
         ],
@@ -64,9 +82,14 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            Object {
-              "status": 200,
-            },
+            Array [
+              Object {
+                "completed": false,
+                "id": 1,
+                "title": "test",
+                "user_id": 1,
+              },
+            ],
           ],
         ],
         "results": Array [
@@ -76,6 +99,16 @@ ShallowWrapper {
           },
         ],
       }
+    }
+    todoListData={
+      Array [
+        Object {
+          "completed": false,
+          "id": 1,
+          "title": "test",
+          "user_id": 1,
+        },
+      ]
     }
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -91,13 +124,65 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "children": <FlatList
+        data={
+          Array [
+            Object {
+              "completed": false,
+              "id": 1,
+              "title": "test",
+              "user_id": 1,
+            },
+          ]
+        }
+        disableVirtualization={false}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        numColumns={1}
+        onEndReachedThreshold={2}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        updateCellsBatchingPeriod={50}
+        windowSize={21}
+      />,
       "style": Object {
         "backgroundColor": "white",
         "flex": 1,
       },
+      "testID": "todoListView",
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "data": Array [
+          Object {
+            "completed": false,
+            "id": 1,
+            "title": "test",
+            "user_id": 1,
+          },
+        ],
+        "disableVirtualization": false,
+        "horizontal": false,
+        "initialNumToRender": 10,
+        "keyExtractor": [Function],
+        "maxToRenderPerBatch": 10,
+        "numColumns": 1,
+        "onEndReachedThreshold": 2,
+        "renderItem": [Function],
+        "scrollEventThrottle": 50,
+        "updateCellsBatchingPeriod": 50,
+        "windowSize": 21,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -106,13 +191,65 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "children": <FlatList
+          data={
+            Array [
+              Object {
+                "completed": false,
+                "id": 1,
+                "title": "test",
+                "user_id": 1,
+              },
+            ]
+          }
+          disableVirtualization={false}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          numColumns={1}
+          onEndReachedThreshold={2}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          updateCellsBatchingPeriod={50}
+          windowSize={21}
+        />,
         "style": Object {
           "backgroundColor": "white",
           "flex": 1,
         },
+        "testID": "todoListView",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "data": Array [
+            Object {
+              "completed": false,
+              "id": 1,
+              "title": "test",
+              "user_id": 1,
+            },
+          ],
+          "disableVirtualization": false,
+          "horizontal": false,
+          "initialNumToRender": 10,
+          "keyExtractor": [Function],
+          "maxToRenderPerBatch": 10,
+          "numColumns": 1,
+          "onEndReachedThreshold": 2,
+          "renderItem": [Function],
+          "scrollEventThrottle": 50,
+          "updateCellsBatchingPeriod": 50,
+          "windowSize": 21,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       "type": [Function],
     },
   ],
