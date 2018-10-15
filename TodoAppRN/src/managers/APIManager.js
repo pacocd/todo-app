@@ -6,7 +6,18 @@ class APIManager {
   getTodoList = async () => {
     try {
       const url = this.baseUrl + '/todos';
+
       return await axios.get(url);
+    } catch (error) {
+      return error;
+    }
+  };
+
+  updateTodo = async (todoId, data) => {
+    try {
+      const url = `${this.baseUrl}/todos/${todoId}`;
+
+      return await axios.put(url, data);
     } catch (error) {
       return error;
     }

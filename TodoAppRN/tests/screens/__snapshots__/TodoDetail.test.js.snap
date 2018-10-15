@@ -151,6 +151,12 @@ ShallowWrapper {
             test
           </Text>
         </Component>,
+        <SquareButton
+          color="#4688f1"
+          onPress={[Function]}
+          text="Edit"
+          textColor="white"
+        />,
       ],
       "style": Object {
         "backgroundColor": "white",
@@ -413,6 +419,20 @@ ShallowWrapper {
         ],
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "color": "#4688f1",
+          "onPress": [Function],
+          "text": "Edit",
+          "textColor": "white",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": [MockFunction],
   },
@@ -541,6 +561,12 @@ ShallowWrapper {
               test
             </Text>
           </Component>,
+          <SquareButton
+            color="#4688f1"
+            onPress={[Function]}
+            text="Edit"
+            textColor="white"
+          />,
         ],
         "style": Object {
           "backgroundColor": "white",
@@ -801,6 +827,20 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "color": "#4688f1",
+            "onPress": [Function],
+            "text": "Edit",
+            "textColor": "white",
+          },
+          "ref": null,
+          "rendered": null,
           "type": [Function],
         },
       ],
