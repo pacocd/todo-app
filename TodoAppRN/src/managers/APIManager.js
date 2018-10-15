@@ -22,6 +22,16 @@ class APIManager {
       return error;
     }
   };
+
+  deleteTodo = async id => {
+    try {
+      const url = `${this.baseUrl}/todos/${id}`;
+
+      return await axios.delete(url);
+    } catch (error) {
+      return error;
+    }
+  };
 }
 
 export default new APIManager();

@@ -4,6 +4,7 @@ exports[`when TodoList is fully rendered renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoList
+    deleteTodo={[MockFunction]}
     getTodoList={
       [MockFunction] {
         "calls": Array [
@@ -114,6 +115,7 @@ ShallowWrapper {
         },
       ]
     }
+    updateTodo={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -309,6 +311,7 @@ exports[`when TodoList is loading renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoList
+    deleteTodo={[Function]}
     getTodoList={
       [MockFunction] {
         "calls": Array [
@@ -339,6 +342,7 @@ ShallowWrapper {
     }
     navigation={Object {}}
     setTodoListData={[MockFunction]}
+    updateTodo={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

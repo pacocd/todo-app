@@ -33,4 +33,31 @@ describe('APIManager tests with OK responses', () => {
 
     expect(response.name).toBe('Error');
   });
+
+  it('calls updateTodo and get a 200 success', async () => {
+    const responseMockData = {
+      id: 1,
+      title: 'test',
+      user_id: 1,
+      completed: true
+    };
+
+    mock
+      .onPut('https://todo-fjcd.herokuapp.com/api/v1/todos/1')
+      .reply(200, responseMockData);
+
+    const response = await APIManager.updateTodo(1, { title: 'test' });
+
+    expect(response.data).toEqual(responseMockData);
+  });
+
+  it('calls deleteTodo and get a 204 success', async () => {
+    mock
+      .onDelete('https://todo-fjcd.herokuapp.com/api/v1/todos/1')
+      .reply(204, { status: 204 });
+
+    const response = await APIManager.deleteTodo(1);
+
+    expect(response.data).toEqual({ status: 204 });
+  });
 });

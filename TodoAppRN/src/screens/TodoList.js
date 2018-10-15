@@ -3,7 +3,8 @@ import {
   View,
   ActivityIndicator,
   TouchableHighlight,
-  Text
+  Text,
+  Alert
 } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -18,13 +19,17 @@ export class TodoList extends Component {
     navigation: PropTypes.object.isRequired,
     getTodoList: PropTypes.func,
     hasError: PropTypes.func,
-    todoListData: PropTypes.array
+    todoListData: PropTypes.array,
+    deleteTodo: PropTypes.func,
+    updateTodo: PropTypes.func
   };
 
   static defaultProps = {
     getTodoList: APIManager.getTodoList,
     hasError: APIErrorManager.hasError,
-    todoListData: undefined
+    todoListData: undefined,
+    deleteTodo: APIManager.deleteTodo,
+    updateTodo: APIManager.updateTodo
   };
 
   static navigationOptions = { title: 'Todo List' };
@@ -46,8 +51,43 @@ export class TodoList extends Component {
   keyExtractor = item => `${item.id}`;
 
   renderListItem = ({ item }) => (
-    <TodoListItem todo={item} onPress={() => this.showTodoDetail(item)} />
+    <TodoListItem
+      todo={item}
+      onPress={() => this.showTodoDetail(item)}
+      onValueChange={() => this.toggleTodo(item.id, item.completed)}
+    />
   );
+
+  showAlert = () => {
+    Alert.alert('Ooops', 'Something went wrong, try again.', [
+      { text: 'Ok', onPress: () => {} }
+    ]);
+  };
+
+  deleteTodo = async id => {
+    const response = await this.props.deleteTodo(id);
+
+    if (this.props.hasError(response)) {
+      this.showAlert();
+    } else {
+      this.fetchData();
+    }
+  };
+
+  deleteTodoFromList = (id, list) => {
+    const index = list.findIndex(value => value.id === id);
+    list.splice(index, 1);
+
+    return list;
+  };
+
+  toggleTodo = async (id, value) => {
+    const response = await this.props.updateTodo(id, { completed: !value });
+
+    if (!this.props.hasError(response)) {
+      this.fetchData();
+    }
+  };
 
   showTodoDetail = todo => {
     this.props.navigation.navigate('todoDetail', { todo });
@@ -69,9 +109,10 @@ export class TodoList extends Component {
             renderItem={this.renderListItem}
             disableRightSwipe
             rightOpenValue={-75}
-            renderHiddenItem={data => {
+            renderHiddenItem={({ item }) => {
               return (
                 <TouchableHighlight
+                  onPress={() => this.deleteTodo(item.id)}
                   style={{
                     backgroundColor: 'red',
                     width: 75,

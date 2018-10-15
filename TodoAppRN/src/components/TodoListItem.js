@@ -16,7 +16,8 @@ export class TodoListItem extends Component {
       title: PropTypes.string.isRequired,
       completed: PropTypes.bool.isRequired
     }).isRequired,
-    onPress: PropTypes.func.isRequired
+    onPress: PropTypes.func.isRequired,
+    onValueChange: PropTypes.func.isRequired
   };
 
   state = {
@@ -33,6 +34,7 @@ export class TodoListItem extends Component {
     return Platform.select({ ios: undefined, android: '#b2ccf7' });
   }
   setSwitchValue = value => {
+    this.props.onValueChange();
     this.setState({ completed: value });
   };
 

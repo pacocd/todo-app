@@ -8,7 +8,8 @@ configure({ adapter: new Adapter() });
 describe('when TodoListItem is fully renderd', () => {
   const props = {
     todo: { id: 1, user_id: 1, title: 'test', completed: false },
-    onPress: jest.fn()
+    onPress: jest.fn(),
+    onValueChange: jest.fn()
   };
   const wrapper = shallow(<TodoListItem {...props} />);
 
