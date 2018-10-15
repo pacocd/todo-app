@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import TodoInput from '../components/TodoInput';
 import SquareButton from '../components/SquareButton';
+import APIManager from '../managers/APIManager';
+import APIErrorManager from '../managers/APIErrorManager';
 
 export class EditTodo extends Component {
   static propTypes = {
@@ -24,10 +26,22 @@ export class EditTodo extends Component {
     title: 'Edit'
   };
 
+  updateTodo = async () => {
+    const { todo } = this.props.navigation.state.params;
+    const response = await APIManager.updateTodo(todo.id, { title: 'Paco' });
+
+    if (APIErrorManager.hasError(response)) {
+      console.log(response);
+    } else {
+      console.log(response);
+      this.props.navigation.popToTop();
+    }
+  };
+
   render() {
     const { todo } = this.props.navigation.state.params;
     return (
-      <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <ScrollView style={{ flex: 1, backgroundColor: 'white' }}>
         <TodoInput
           fieldName="user_id"
           value={todo.user_id}
@@ -50,9 +64,9 @@ export class EditTodo extends Component {
           text="Save"
           textColor="white"
           color="#4688f1"
-          onPress={() => {}}
+          onPress={this.updateTodo}
         />
-      </View>
+      </ScrollView>
     );
   }
 }

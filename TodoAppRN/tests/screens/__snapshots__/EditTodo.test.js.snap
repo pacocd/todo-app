@@ -122,7 +122,7 @@ ShallowWrapper {
         "type": [Function],
       },
     ],
-    "type": [Function],
+    "type": [MockFunction],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -220,7 +220,7 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
-      "type": [Function],
+      "type": [MockFunction],
     },
   ],
   Symbol(enzyme.__options__): Object {
