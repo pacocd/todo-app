@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, Button } from 'react-native';
 import PropTypes from 'prop-types';
 import { images } from '../assets';
+import SquareButton from '../components/SquareButton';
 
 export class TodoDetail extends Component {
   static propTypes = {
@@ -52,18 +53,20 @@ export class TodoDetail extends Component {
   }
 
   render() {
-    const {
-      id,
-      user_id: userId,
-      title,
-      completed
-    } = this.props.navigation.state.params.todo;
+    const { todo } = this.props.navigation.state.params;
+    const { id, user_id: userId, title, completed } = todo;
     return (
       <ScrollView style={{ flex: 1, backgroundColor: 'white' }}>
         {this.renderCompletionStatusImage(completed)}
         {this.renderLabels('Id', id)}
         {this.renderLabels('User', userId)}
         {this.renderLabels('Title', title)}
+        <SquareButton
+          text="Edit"
+          textColor="white"
+          color="#4688f1"
+          onPress={() => this.props.navigation.navigate('editTodo', { todo })}
+        />
       </ScrollView>
     );
   }
