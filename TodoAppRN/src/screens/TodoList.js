@@ -20,14 +20,16 @@ export class TodoList extends Component {
     getTodoList: PropTypes.func,
     hasError: PropTypes.func,
     todoListData: PropTypes.array,
-    deleteTodo: PropTypes.func
+    deleteTodo: PropTypes.func,
+    updateTodo: PropTypes.func
   };
 
   static defaultProps = {
     getTodoList: APIManager.getTodoList,
     hasError: APIErrorManager.hasError,
     todoListData: undefined,
-    deleteTodo: APIManager.deleteTodo
+    deleteTodo: APIManager.deleteTodo,
+    updateTodo: APIManager.updateTodo
   };
 
   static navigationOptions = { title: 'Todo List' };
@@ -49,7 +51,11 @@ export class TodoList extends Component {
   keyExtractor = item => `${item.id}`;
 
   renderListItem = ({ item }) => (
-    <TodoListItem todo={item} onPress={() => this.showTodoDetail(item)} />
+    <TodoListItem
+      todo={item}
+      onPress={() => this.showTodoDetail(item)}
+      onValueChange={() => this.toggleTodo(item.id, item.completed)}
+    />
   );
 
   showAlert = () => {
@@ -64,10 +70,7 @@ export class TodoList extends Component {
     if (this.props.hasError(response)) {
       this.showAlert();
     } else {
-      const { todoListData } = this.props;
-      const newTodoListData = this.deleteTodoFromList(id, todoListData);
-
-      this.props.setTodoListData(newTodoListData);
+      this.fetchData();
     }
   };
 
@@ -76,6 +79,14 @@ export class TodoList extends Component {
     list.splice(index, 1);
 
     return list;
+  };
+
+  toggleTodo = async (id, value) => {
+    const response = await this.props.updateTodo(id, { completed: !value });
+
+    if (!this.props.hasError(response)) {
+      this.fetchData();
+    }
   };
 
   showTodoDetail = todo => {

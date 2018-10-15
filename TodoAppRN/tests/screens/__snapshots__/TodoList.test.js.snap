@@ -115,6 +115,7 @@ ShallowWrapper {
         },
       ]
     }
+    updateTodo={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -341,6 +342,7 @@ ShallowWrapper {
     }
     navigation={Object {}}
     setTodoListData={[MockFunction]}
+    updateTodo={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
