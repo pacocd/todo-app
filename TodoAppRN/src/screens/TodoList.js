@@ -45,7 +45,13 @@ export class TodoList extends Component {
 
   keyExtractor = item => `${item.id}`;
 
-  renderListItem = ({ item }) => <TodoListItem todo={item} />;
+  renderListItem = ({ item }) => (
+    <TodoListItem todo={item} onPress={() => this.showTodoDetail(item)} />
+  );
+
+  showTodoDetail = todo => {
+    this.props.navigation.navigate('todoDetail', { todo });
+  };
 
   render() {
     const { todoListData } = this.props;
