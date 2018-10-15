@@ -41,7 +41,8 @@ describe('when TodoList is fully rendered', () => {
     ),
     hasError: jest.fn().mockReturnValue(false),
     setTodoListData: jest.fn(),
-    todoListData: todoListDataMock
+    todoListData: todoListDataMock,
+    deleteTodo: jest.fn()
   };
   const wrapper = shallow(<TodoList {...props} />);
 

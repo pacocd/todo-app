@@ -3,7 +3,8 @@ import {
   View,
   ActivityIndicator,
   TouchableHighlight,
-  Text
+  Text,
+  Alert
 } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -18,13 +19,15 @@ export class TodoList extends Component {
     navigation: PropTypes.object.isRequired,
     getTodoList: PropTypes.func,
     hasError: PropTypes.func,
-    todoListData: PropTypes.array
+    todoListData: PropTypes.array,
+    deleteTodo: PropTypes.func
   };
 
   static defaultProps = {
     getTodoList: APIManager.getTodoList,
     hasError: APIErrorManager.hasError,
-    todoListData: undefined
+    todoListData: undefined,
+    deleteTodo: APIManager.deleteTodo
   };
 
   static navigationOptions = { title: 'Todo List' };
@@ -49,6 +52,32 @@ export class TodoList extends Component {
     <TodoListItem todo={item} onPress={() => this.showTodoDetail(item)} />
   );
 
+  showAlert = () => {
+    Alert.alert('Ooops', 'Something went wrong, try again.', [
+      { text: 'Ok', onPress: () => {} }
+    ]);
+  };
+
+  deleteTodo = async id => {
+    const response = await this.props.deleteTodo(id);
+
+    if (this.props.hasError(response)) {
+      this.showAlert();
+    } else {
+      const { todoListData } = this.props;
+      const newTodoListData = this.deleteTodoFromList(id, todoListData);
+
+      this.props.setTodoListData(newTodoListData);
+    }
+  };
+
+  deleteTodoFromList = (id, list) => {
+    const index = list.findIndex(value => value.id === id);
+    list.splice(index, 1);
+
+    return list;
+  };
+
   showTodoDetail = todo => {
     this.props.navigation.navigate('todoDetail', { todo });
   };
@@ -69,9 +98,10 @@ export class TodoList extends Component {
             renderItem={this.renderListItem}
             disableRightSwipe
             rightOpenValue={-75}
-            renderHiddenItem={data => {
+            renderHiddenItem={({ item }) => {
               return (
                 <TouchableHighlight
+                  onPress={() => this.deleteTodo(item.id)}
                   style={{
                     backgroundColor: 'red',
                     width: 75,
