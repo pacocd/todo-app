@@ -23,6 +23,12 @@ export class TodoListItem extends Component {
     completed: this.props.todo.completed
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.todo.completed !== nextProps.todo.completed) {
+      this.setState({ completed: nextProps.todo.completed });
+    }
+  }
+
   getThumbColor() {
     return Platform.select({ ios: undefined, android: '#b2ccf7' });
   }
