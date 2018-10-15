@@ -51,6 +51,12 @@ ShallowWrapper {
           type="switch"
           value={false}
         />,
+        <SquareButton
+          color="#4688f1"
+          onPress={[Function]}
+          text="Save"
+          textColor="white"
+        />,
       ],
       "style": Object {
         "backgroundColor": "white",
@@ -101,6 +107,20 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "color": "#4688f1",
+          "onPress": [Function],
+          "text": "Save",
+          "textColor": "white",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": [Function],
   },
@@ -128,6 +148,12 @@ ShallowWrapper {
             title="Completed"
             type="switch"
             value={false}
+          />,
+          <SquareButton
+            color="#4688f1"
+            onPress={[Function]}
+            text="Save"
+            textColor="white"
           />,
         ],
         "style": Object {
@@ -174,6 +200,20 @@ ShallowWrapper {
             "title": "Completed",
             "type": "switch",
             "value": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "color": "#4688f1",
+            "onPress": [Function],
+            "text": "Save",
+            "textColor": "white",
           },
           "ref": null,
           "rendered": null,

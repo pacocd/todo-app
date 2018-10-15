@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import TodoInput from '../components/TodoInput';
+import SquareButton from '../components/SquareButton';
 
 export class EditTodo extends Component {
   static propTypes = {
@@ -44,6 +45,12 @@ export class EditTodo extends Component {
           value={todo.completed}
           type="switch"
           title="Completed"
+        />
+        <SquareButton
+          text="Save"
+          textColor="white"
+          color="#4688f1"
+          onPress={() => {}}
         />
       </View>
     );
