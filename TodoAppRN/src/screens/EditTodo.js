@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Alert } from 'react-native';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { setTodoListData, resetEditingFieldsData } from '../redux/actions';
 import TodoInput from '../components/TodoInput';
 import SquareButton from '../components/SquareButton';
 import APIManager from '../managers/APIManager';
@@ -19,22 +21,46 @@ export class EditTodo extends Component {
           }).isRequired
         }).isRequired
       }).isRequired
-    }).isRequired
+    }).isRequired,
+    updateTodo: PropTypes.func,
+    getTodoList: PropTypes.func,
+    hasError: PropTypes.func,
+    editingFieldsData: PropTypes.object.isRequired
+  };
+
+  static defaultProps = {
+    updateTodo: APIManager.updateTodo,
+    getTodoList: APIManager.getTodoList,
+    hasError: APIErrorManager.hasError
   };
 
   static navigationOptions = {
     title: 'Edit'
   };
 
-  updateTodo = async () => {
-    const { todo } = this.props.navigation.state.params;
-    const response = await APIManager.updateTodo(todo.id, { title: 'Paco' });
+  componentWillUnmount() {
+    this.props.resetEditingFieldsData();
+  }
 
-    if (APIErrorManager.hasError(response)) {
-      console.log(response);
+  showAlert = () => {
+    Alert.alert('Ooops', 'Something went wrong, try again.', [
+      { text: 'Ok', onPress: () => {} }
+    ]);
+  };
+
+  updateTodo = async () => {
+    const { editingFieldsData } = this.props;
+    const { todo } = this.props.navigation.state.params;
+    const response = await this.props.updateTodo(todo.id, editingFieldsData);
+
+    if (this.props.hasError(response)) {
+      this.showAlert();
     } else {
-      console.log(response);
       this.props.navigation.popToTop();
+      const newTodoList = await this.props.getTodoList();
+      if (!this.props.hasError(newTodoList)) {
+        this.props.setTodoListData(newTodoList.data);
+      }
     }
   };
 
@@ -71,4 +97,19 @@ export class EditTodo extends Component {
   }
 }
 
-export default EditTodo;
+export const mapStateToProps = ({ todos }) => {
+  const { editingFieldsData } = todos;
+  return { editingFieldsData };
+};
+
+export const mapDispatchToProps = dispatch => {
+  return {
+    resetEditingFieldsData: () => dispatch(resetEditingFieldsData()),
+    setTodoListData: data => dispatch(setTodoListData(data))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(EditTodo);

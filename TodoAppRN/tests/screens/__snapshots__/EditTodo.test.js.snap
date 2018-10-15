@@ -4,8 +4,12 @@ exports[`when EditTodo is fully rendered renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EditTodo
+    editingFieldsData={Object {}}
+    getTodoList={[MockFunction]}
+    hasError={[MockFunction]}
     navigation={
       Object {
+        "popToTop": [MockFunction],
         "state": Object {
           "params": Object {
             "todo": Object {
@@ -18,6 +22,8 @@ ShallowWrapper {
         },
       }
     }
+    resetEditingFieldsData={[MockFunction]}
+    updateTodo={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
