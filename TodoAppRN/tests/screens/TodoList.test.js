@@ -30,7 +30,7 @@ describe('when TodoList is fully rendered', () => {
     { id: 1, title: 'test', user_id: 1, completed: false }
   ];
   const props = {
-    navigation: {},
+    navigation: { navigate: jest.fn() },
     getTodoList: jest.fn().mockReturnValue(
       new Promise(resolve =>
         resolve({
@@ -87,12 +87,18 @@ describe('when TodoList is fully rendered', () => {
   it('expects activityIndicatorView to not be rendered', () => {
     expect(wrapper.find('.activityIndicatorView').exists()).toBeFalsy();
   });
+
+  it('calls showTodoDetail and expects navigation to have been called with todo as param', () => {
+    wrapper.instance().showTodoDetail('test');
+
+    expect(wrapper.instance().props.navigation.navigate).toHaveBeenCalledWith(
+      'todoDetail',
+      { todo: 'test' }
+    );
+  });
 });
 
 describe('when TodoList is loading', () => {
-  const todoListDataMock = [
-    { id: 1, title: 'test', user_id: 1, completed: false }
-  ];
   const props = {
     navigation: {},
     getTodoList: jest.fn(),

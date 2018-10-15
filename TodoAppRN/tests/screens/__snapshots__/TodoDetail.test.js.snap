@@ -32,14 +32,389 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "children": Array [
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "testUri": "../../../src/assets/images/x_icon.png",
+            }
+          }
+          style={
+            Object {
+              "alignSelf": "center",
+              "height": 100,
+              "marginVertical": 20,
+              "width": 100,
+            }
+          }
+        />,
+        <Component
+          style={
+            Object {
+              "margin": 15,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "marginBottom": 8,
+              }
+            }
+          >
+            Id
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 14,
+              }
+            }
+          >
+            1
+          </Text>
+        </Component>,
+        <Component
+          style={
+            Object {
+              "margin": 15,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "marginBottom": 8,
+              }
+            }
+          >
+            User
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 14,
+              }
+            }
+          >
+            1
+          </Text>
+        </Component>,
+        <Component
+          style={
+            Object {
+              "margin": 15,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "marginBottom": 8,
+              }
+            }
+          >
+            Title
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 14,
+              }
+            }
+          >
+            test
+          </Text>
+        </Component>,
+      ],
       "style": Object {
         "backgroundColor": "white",
         "flex": 1,
       },
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "resizeMode": "contain",
+          "source": Object {
+            "testUri": "../../../src/assets/images/x_icon.png",
+          },
+          "style": Object {
+            "alignSelf": "center",
+            "height": 100,
+            "marginVertical": 20,
+            "width": 100,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              Id
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              1
+            </Text>,
+          ],
+          "style": Object {
+            "margin": 15,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Id",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "marginBottom": 8,
+              },
+            },
+            "ref": null,
+            "rendered": "Id",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": 1,
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 14,
+              },
+            },
+            "ref": null,
+            "rendered": 1,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              User
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              1
+            </Text>,
+          ],
+          "style": Object {
+            "margin": 15,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "User",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "marginBottom": 8,
+              },
+            },
+            "ref": null,
+            "rendered": "User",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": 1,
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 14,
+              },
+            },
+            "ref": null,
+            "rendered": 1,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              Title
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              test
+            </Text>,
+          ],
+          "style": Object {
+            "margin": 15,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Title",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "marginBottom": 8,
+              },
+            },
+            "ref": null,
+            "rendered": "Title",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "test",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontSize": 14,
+              },
+            },
+            "ref": null,
+            "rendered": "test",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [MockFunction],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -47,14 +422,389 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "children": Array [
+          <Image
+            resizeMode="contain"
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/x_icon.png",
+              }
+            }
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": 100,
+                "marginVertical": 20,
+                "width": 100,
+              }
+            }
+          />,
+          <Component
+            style={
+              Object {
+                "margin": 15,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              Id
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              1
+            </Text>
+          </Component>,
+          <Component
+            style={
+              Object {
+                "margin": 15,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              User
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              1
+            </Text>
+          </Component>,
+          <Component
+            style={
+              Object {
+                "margin": 15,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                }
+              }
+            >
+              Title
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontSize": 14,
+                }
+              }
+            >
+              test
+            </Text>
+          </Component>,
+        ],
         "style": Object {
           "backgroundColor": "white",
           "flex": 1,
         },
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "resizeMode": "contain",
+            "source": Object {
+              "testUri": "../../../src/assets/images/x_icon.png",
+            },
+            "style": Object {
+              "alignSelf": "center",
+              "height": 100,
+              "marginVertical": 20,
+              "width": 100,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                Id
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                1
+              </Text>,
+            ],
+            "style": Object {
+              "margin": 15,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Id",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                },
+              },
+              "ref": null,
+              "rendered": "Id",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": 1,
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontSize": 14,
+                },
+              },
+              "ref": null,
+              "rendered": 1,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                User
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                1
+              </Text>,
+            ],
+            "style": Object {
+              "margin": 15,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "User",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                },
+              },
+              "ref": null,
+              "rendered": "User",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": 1,
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontSize": 14,
+                },
+              },
+              "ref": null,
+              "rendered": 1,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                Title
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                test
+              </Text>,
+            ],
+            "style": Object {
+              "margin": 15,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Title",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "marginBottom": 8,
+                },
+              },
+              "ref": null,
+              "rendered": "Title",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "test",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontSize": 14,
+                },
+              },
+              "ref": null,
+              "rendered": "test",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [MockFunction],
     },
   ],
   Symbol(enzyme.__options__): Object {

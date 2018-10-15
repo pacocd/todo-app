@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
+import { images } from '../assets';
 
 export class TodoDetail extends Component {
   static propTypes = {
@@ -18,9 +19,53 @@ export class TodoDetail extends Component {
     }).isRequired
   };
 
+  static navigationOptions = {
+    title: 'Detail'
+  };
+
+  renderLabels(title, content) {
+    return (
+      <View style={{ margin: 15 }}>
+        <Text style={{ fontWeight: 'bold', marginBottom: 8, fontSize: 12 }}>
+          {title}
+        </Text>
+        <Text style={{ fontSize: 14 }}>{content}</Text>
+      </View>
+    );
+  }
+
+  renderCompletionStatusImage(completed) {
+    const image = completed ? images.checkmark : images.xIcon;
+
+    return (
+      <Image
+        resizeMode="contain"
+        source={image}
+        style={{
+          alignSelf: 'center',
+          height: 100,
+          width: 100,
+          marginVertical: 20
+        }}
+      />
+    );
+  }
+
   render() {
-    debugger;
-    return <View style={{ flex: 1, backgroundColor: 'white' }} />;
+    const {
+      id,
+      user_id: userId,
+      title,
+      completed
+    } = this.props.navigation.state.params.todo;
+    return (
+      <ScrollView style={{ flex: 1, backgroundColor: 'white' }}>
+        {this.renderCompletionStatusImage(completed)}
+        {this.renderLabels('Id', id)}
+        {this.renderLabels('User', userId)}
+        {this.renderLabels('Title', title)}
+      </ScrollView>
+    );
   }
 }
 
